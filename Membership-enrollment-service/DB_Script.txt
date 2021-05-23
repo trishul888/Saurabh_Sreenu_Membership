@@ -1,8 +1,22 @@
-create table client_details(client_Id VARCHAR(100) NOT NULL,description VARCHAR(40) NOT NULL);
+create table client_details(
+			id number NOT NULL PRIMARY KEY,
+			client_Id VARCHAR(100) NOT NULL,
+			description VARCHAR(40) NOT NULL);
 
-create table channel_details(channel_id VARCHAR(100) NOT NULL,description VARCHAR(40) NOT NULL);
+CREATE TABLE Persons (
+    ID int NOT NULL PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+); 
+
+create table channel_details(
+			id number NOT NULL PRIMARY KEY,
+			channel_id VARCHAR(100) NOT NULL,
+			description VARCHAR(40) NOT NULL);
 
 create table customer_details(
+							id number NOT NULL PRIMARY KEY,	
 						   card_number VARCHAR(100) NOT NULL,
                            cvv_num VARCHAR(40) NOT NULL,
 						   exp_date VARCHAR(40) NOT null,
@@ -12,14 +26,15 @@ create table customer_details(
 						   email_id VARCHAR(40) NOT null);
 						  
 						  
-create table enrollment(card_number VARCHAR(100) NOT NULL,
+create table enrollment(id number NOT NULL PRIMARY KEY,
+						card_number VARCHAR(100) NOT NULL,
                            cvv_num VARCHAR(40) NOT NULL,
 						   exp_date VARCHAR(40) NOT null,
 						   first_name VARCHAR(40) NOT null,
 						   lastname_name VARCHAR(40) NOT null,
 						   mobile_num VARCHAR(40) NOT null,
 						   email_id VARCHAR(40) NOT null,
-						   dob VARCHAR(40) NOT null)
+						   dob VARCHAR(40) NOT null);
 						   
 
 						   
