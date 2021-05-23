@@ -1,0 +1,46 @@
+create table client_details(client_Id VARCHAR(100) NOT NULL,description VARCHAR(40) NOT NULL);
+
+create table channel_details(channel_id VARCHAR(100) NOT NULL,description VARCHAR(40) NOT NULL);
+
+create table customer_details(
+						   card_number VARCHAR(100) NOT NULL,
+                           cvv_num VARCHAR(40) NOT NULL,
+						   exp_date VARCHAR(40) NOT null,
+						   first_name VARCHAR(40) NOT null,
+						   lastname_name VARCHAR(40) NOT null,
+						   mobile_num VARCHAR(40) NOT null,
+						   email_id VARCHAR(40) NOT null);
+						  
+						  
+create table enrollment(card_number VARCHAR(100) NOT NULL,
+                           cvv_num VARCHAR(40) NOT NULL,
+						   exp_date VARCHAR(40) NOT null,
+						   first_name VARCHAR(40) NOT null,
+						   lastname_name VARCHAR(40) NOT null,
+						   mobile_num VARCHAR(40) NOT null,
+						   email_id VARCHAR(40) NOT null,
+						   dob VARCHAR(40) NOT null)
+						   
+
+						   
+INSERT INTO client_details (client_Id, description) VALUES ("web", "web client");
+INSERT INTO client_details (client_Id, description) VALUES ("cc", "cc client");
+INSERT INTO client_details (client_Id, description) VALUES ("mobile", "mobile client");
+
+INSERT INTO channel_details (channel_id, description) VALUES ("online", "web client");
+INSERT INTO channel_details (channel_id, description) VALUES ("offline", "cc client");
+INSERT INTO channel_details (channel_id, description) VALUES ("mobile", "mobile client");
+
+INSERT INTO customer_details (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id) VALUES ("23232323232", "123","12-2018","sreenu","tech","987465227890","sreenu.sreenutech@gmail.com");
+INSERT INTO customer_details (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id) VALUES ("44444444444", "456","09-2018","sreenu","tech","987465221234","sreenu.stech@gmail.com");
+INSERT INTO customer_details (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id) VALUES ("55555555555", "084","12-2020","sreenu","tech","987465224567","sreenu.stech@gmail.com");
+
+INSERT INTO customer_details (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id) VALUES ("23232323232", "123","12-2018","sreenu","tech","987465227890","sreenu.sreenutech@gmail.com");
+INSERT INTO customer_details (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id) VALUES ("44444444444", "456","09-2018","sreenu","tech","987465221234","sreenu.stech@gmail.com");
+INSERT INTO enrollment (card_number, cvv_num,exp_date,first_name,lastname_name,mobile_num,email_id,dob,enrollment_date) VALUES ("55555555555", "084","12-2020","sreenu","tech","987465224567","sreenu.stech@gmail.com","12-05-2021");
+
+select  * from client_details;
+select  * from customer_details;
+select  * from channel_details;
+
+select * from enrollment;
