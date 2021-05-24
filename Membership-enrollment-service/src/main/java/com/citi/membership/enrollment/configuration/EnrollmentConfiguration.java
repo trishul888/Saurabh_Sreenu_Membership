@@ -63,7 +63,7 @@ public class EnrollmentConfiguration {
 		LocalSessionFactoryBean localSessionFactoryBean=new LocalSessionFactoryBean();
 		localSessionFactoryBean.setDataSource(dataSource());
 		localSessionFactoryBean.setHibernateProperties(hibernateProperties());
-		localSessionFactoryBean.setPackagesToScan("");
+		localSessionFactoryBean.setPackagesToScan("com.citi.membership.enrollment.entities");
 		return (SessionFactory) localSessionFactoryBean;
 	}
 

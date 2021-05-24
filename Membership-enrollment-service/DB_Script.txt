@@ -3,12 +3,6 @@ create table client_details(
 			client_Id VARCHAR(100) NOT NULL,
 			description VARCHAR(40) NOT NULL);
 
-CREATE TABLE Persons (
-    ID int NOT NULL PRIMARY KEY,
-    LastName varchar(255) NOT NULL,
-    FirstName varchar(255),
-    Age int
-); 
 
 create table channel_details(
 			id number NOT NULL PRIMARY KEY,
