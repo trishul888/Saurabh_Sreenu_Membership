@@ -19,6 +19,7 @@ import com.citi.membership.enrollment.model.EnrollmentRequest;
 import com.citi.membership.enrollment.model.EnrollmentResponse;
 import com.citi.membership.enrollment.model.StatusBlock;
 import com.citi.membership.enrollment.service.EnrollmentService;
+import com.citi.membership.enrollment.service.EnrollmentServiceImpl;
 import com.citi.membership.enrollment.validator.EnrollmentRequestValidator;
 
 /**
@@ -33,8 +34,8 @@ public class EnrollmentController {
 	private Logger logger=Logger.getLogger(EnrollmentController.class);
 	@Autowired
 	EnrollmentRequestValidator validator;
-	@Autowired
-	EnrollmentService service;
+	//@Autowired
+	EnrollmentService service=new EnrollmentServiceImpl();
 	
 	@RequestMapping(value = "/enrollment",method = RequestMethod.POST,consumes = "application/json",produces = "application/json")
 	@ResponseBody

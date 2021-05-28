@@ -6,10 +6,12 @@ package com.citi.membership.enrollment.service;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.citi.membership.enrollment.dao.EnrollmentDao;
 import com.citi.membership.enrollment.dao.EnrollmentDaoImpl;
+import com.citi.membership.enrollment.dao.EnrollmentHibernateDaoImpl;
 import com.citi.membership.enrollment.exception.BusinessException;
 import com.citi.membership.enrollment.exception.SystemException;
 import com.citi.membership.enrollment.model.EnrollmentDaoRequest;
@@ -29,14 +31,16 @@ import com.citi.membership.enrollment.svcclient.CardsServiceClientImpl;
 public class EnrollmentServiceImpl implements EnrollmentService {
 	private Logger logger=Logger.getLogger(EnrollmentServiceImpl.class);
 	@Autowired
-	EnrollmentDao enrollmentDao;
+	CardsServiceClient cardsServiceClient;
+	
+//	@Autowired
+//	@Qualifier("EnrollmentHibernateDaoImpl")
+	EnrollmentDao enrollmentDao=new EnrollmentDaoImpl();
 	
 	public EnrollmentResponse createEnrollment(EnrollmentRequest enrollmentRequest) throws BusinessException, SystemException {
 		logger.debug("Enter into service--start");
 		//1.Get the enrollment Request from controller.
 		//2.Prepare the request for Sevice client
-		CardsServiceClient cardsServiceClient=new CardsServiceClientImpl();
-		
 		//3.Call the service client
 		//4.Prepare the request for dao with the help of controller request
 		EnrollmentDaoRequest daoRequest=new EnrollmentDaoRequest();

@@ -37,12 +37,12 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
 public class EnrollmentSpringDaoImpl extends StoredProcedure implements EnrollmentDao {
 
 	private Logger logger=Logger.getLogger(EnrollmentDaoImpl.class);
-	@Autowired
-	public EnrollmentSpringDaoImpl(JdbcTemplate jdbcTemplate) {
-		super(jdbcTemplate,"MRP_ENROLLMENT");
-		logger.debug("*******EnrollmentSpringDaoImpl******");
-		registerInputOutputParam();
-	}
+//	@Autowired
+//	public EnrollmentSpringDaoImpl(JdbcTemplate jdbcTemplate) {
+//		super(jdbcTemplate,"MRP_ENROLLMENT");
+//		logger.debug("*******EnrollmentSpringDaoImpl******");
+//		registerInputOutputParam();
+//	}
 	
 	/**
 	 * 
