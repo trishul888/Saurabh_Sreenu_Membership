@@ -25,8 +25,8 @@ public class EnrollmentTest {
 	 * @throws SQLException 
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","java","saurabh");
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection connection=DriverManager.getConnection("jdbc:mysql:///saurabh_sreenu","root","Saurabh23patre@");
 		String sql="{call MRP_ENROLLMENT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
 		CallableStatement cs=connection.prepareCall(sql);
 
@@ -48,7 +48,7 @@ public class EnrollmentTest {
 		cs.setString(12, "30-12-2018");
 		boolean  b = cs.execute();
 
-		System.out.println(" boolean value is :"+b);
+		System.out.println("boolean value is :"+b);
 
 		System.out.println(cs.getString(13));
 		System.out.println(cs.getString(14));
