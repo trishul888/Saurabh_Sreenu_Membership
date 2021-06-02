@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jndi.JndiTemplate;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -35,7 +36,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan(basePackages = "com.citi.membership.enrollment")
 public class EnrollmentConfiguration {
-	
+
 	@Bean
 	@Profile("prod")
 	public PropertySourcesPlaceholderConfigurer prodEnvProperties() {
@@ -44,29 +45,31 @@ public class EnrollmentConfiguration {
 		placeHolder.setLocation(new ClassPathResource("properties/serivce/card-details-service-prod.properties"));
 		return placeHolder;
 	}
-	
+
 	@Bean
 	public RestTemplate restTempate() {
 		return new RestTemplate();
 	}
 	/*
-		@Bean
-	public JdbcTemplate jdbcTemplate() {
+	@Bean
+	public JdbcTemplate jdbcTemplate() throws NamingException {
 		return new JdbcTemplate(dataSource());
 	}
-*/
+
 	@Bean
-	public DataSource dataSource() throws NamingException {
-	/*  DriverManagerDataSource dataSource=new DriverManagerDataSource();
+	public DataSource dataSource() throws NamingException  {
+			DriverManagerDataSource dataSource=new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql:///saurabh");
+		dataSource.setUrl("jdbc:mysql:///saurabh_sreenu");
 		dataSource.setUsername("root");
 		dataSource.setPassword("Saurabh23patre@");
-		Context ctx=new InitialContext();
-		DataSource dataSource=(DataSource) ctx.lookup("java:/comp/env/DsJndi");
-		*/
-		return (DataSource) new JndiTemplate().lookup("java:/comp/env/DsJndi");
-	}
+		return dataSource();
+		 		Context ctx=new InitialContext();
+		 //DataSource dataSource=(DataSource) ctx.lookup("java:/comp/env/DsJndi");
+		 return (DataSource) new JndiTemplate().lookup("java:/comp/env/DsJndi");
+
+
+	}*/
 	/*
 	private final Properties hibernateProperties() {
 		Properties hibernateProperties=new Properties();
@@ -89,5 +92,5 @@ public class EnrollmentConfiguration {
 		hibernateTemplate.setSessionFactory(sessionFactory());
 		return hibernateTemplate;
 	}
-	*/
+	 */
 }

@@ -11,6 +11,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Types;
 
+import org.apache.log4j.Logger;
+
 /**
  * @author     ::asus
  * @Date       ::@May 18, 2021
@@ -18,17 +20,17 @@ import java.sql.Types;
  * @Tags       ::
  */
 public class CallableTest {
-
+	private final static Logger logger=Logger.getLogger(CallableTest.class);
 	/**
 	 * @param args
 	 * @throws SQLException 
 	 * @throws ClassNotFoundException 
 	 */
-	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+	public static void main(final String[] args) throws SQLException, ClassNotFoundException {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","java","saurabh");
-		String sql = "{call GET_TRANSACTIONS(?,?,?,?,?,?,?,?)}";
-		CallableStatement cs=connection.prepareCall(sql);
+		final Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","java","saurabh");
+		final String sql = "{call GET_TRANSACTIONS(?,?,?,?,?,?,?,?)}";
+		final CallableStatement cs=connection.prepareCall(sql);
 
 		cs.registerOutParameter(7, Types.VARCHAR);
 		cs.registerOutParameter(8, Types.VARCHAR);
@@ -40,17 +42,19 @@ public class CallableTest {
 		cs.setString(5, "12-2018");
 		cs.setString(6, "sunny");
 
-		boolean  b = cs.execute();
+		final boolean  b = cs.execute();
 		
-		System.out.println(" boolean value is :"+b);
+		logger.info(" boolean value is :"+b);
 		/*ResultSet rs = cs.executeQuery();
 
 		while (rs.next()) {
 			System.out.println(rs.getString(1) + "--" + rs.getString(2) + "--" + rs.getString(3));
 		}*/
 
-		System.out.println(cs.getString(7));
-		System.out.println(cs.getString(8));
+		logger.debug(cs.getString(7));
+		logger.debug(cs.getString(8));
+		cs.close();
+		connection.close();
 	}
 
 }

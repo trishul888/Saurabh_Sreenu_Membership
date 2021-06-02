@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.citi.membership.enrollment.dao.EnrollmentDaoImplTest" time="2.225" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="com.citi.membership.enrollment.dao.EnrollmentDaoImplTest" time="0.031" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\Saurabh\Java_Project_Real\JavaProject_Sreenu\Sreenu_Project_Saurabh\Sreenu_Project_Saurabh_DAO_ONWORDS\Sreenu_Basic_saurabh_New_Update\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf13655427786724462073.tmp"/>
+    <property name="classworlds.conf" value="E:\Saurabh\Java_Project_Real\JavaProject_Sreenu\Sreenu_Project_Saurabh\Sreenu_Project_Saurabh_DAO_ONWORDS\Sreenu_Basic_saurabh_New_Update\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7365604757509272038.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="D:\Program Files\Java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jdk-11.0.8/bin/server;D:/Program Files/Java/jdk-11.0.8/bin;D:\app\asus\product\11.2.0\dbhome_2\bin;D:\app\asus\product\11.2.0\dbhome_1\bin;D:\Program Files\Java\jdk-11.0.8\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_201\bin;D:\Program Files\PuTTY\;E:\software\Maven Tool\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;D:\Program Files\nodejs\;C:\Program Files\Cloud Foundry;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\asus\AppData\Local\Microsoft\WindowsApps;C:\Users\asus\AppData\Roaming\npm;%IntelliJ IDEA Community Edition%;C:\Users\asus\AppData\Local\GitHubDesktop\bin;E:\software\java\eclipse-jee-2020-03-R-incubation-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,37 +61,35 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.citi.membership.enrollment.dao.EnrollmentDaoImplTest" name="testCreateEnrollment" time="2.225">
-    <error type="SystemException">SystemException [responseCode=8888, responseMsg=Unknown Error from database Default algorithm definitions for TrustManager and/or KeyManager are invalid.  Check java security properties file.]
-	at com.citi.membership.enrollment.dao.EnrollmentDaoImpl.createEnrollment(EnrollmentDaoImpl.java:96)
-	at com.citi.membership.enrollment.dao.EnrollmentDaoImplTest.testCreateEnrollment(EnrollmentDaoImplTest.java:58)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:68)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:316)
-	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:89)
-	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:97)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.executeTest(PowerMockJUnit44RunnerDelegateImpl.java:300)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTestInSuper(PowerMockJUnit47RunnerDelegateImpl.java:131)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.access$100(PowerMockJUnit47RunnerDelegateImpl.java:59)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner$TestExecutorStatement.evaluate(PowerMockJUnit47RunnerDelegateImpl.java:147)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.evaluateStatement(PowerMockJUnit47RunnerDelegateImpl.java:107)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTest(PowerMockJUnit47RunnerDelegateImpl.java:82)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runBeforesThenTestThenAfters(PowerMockJUnit44RunnerDelegateImpl.java:288)
-	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:87)
-	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:50)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.invokeTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:208)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.runMethods(PowerMockJUnit44RunnerDelegateImpl.java:147)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$1.run(PowerMockJUnit44RunnerDelegateImpl.java:121)
-	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:34)
-	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:44)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.run(PowerMockJUnit44RunnerDelegateImpl.java:123)
-	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.run(JUnit4TestSuiteChunkerImpl.java:121)
-	at org.powermock.modules.junit4.common.internal.impl.AbstractCommonPowerMockRunner.run(AbstractCommonPowerMockRunner.java:53)
-	at org.powermock.modules.junit4.PowerMockRunner.run(PowerMockRunner.java:59)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+  <testcase classname="com.citi.membership.enrollment.dao.EnrollmentDaoImplTest" name="initializationError" time="0.031">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+	at org.powermock.modules.junit4.internal.impl.testcaseworkaround.PowerMockJUnit4MethodValidator.validateInstanceMethods(PowerMockJUnit4MethodValidator.java:77)
+	at org.junit.internal.runners.MethodValidator.validateMethodsForDefaultRunner(MethodValidator.java:51)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.validate(PowerMockJUnit44RunnerDelegateImpl.java:108)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.&lt;init&gt;(PowerMockJUnit44RunnerDelegateImpl.java:70)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl.&lt;init&gt;(PowerMockJUnit47RunnerDelegateImpl.java:42)
+	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit49RunnerDelegateImpl.&lt;init&gt;(PowerMockJUnit49RunnerDelegateImpl.java:25)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.createDelegatorFromClassloader(JUnit4TestSuiteChunkerImpl.java:172)
+	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.createDelegatorFromClassloader(JUnit4TestSuiteChunkerImpl.java:48)
+	at org.powermock.tests.utils.impl.AbstractTestSuiteChunkerImpl.createTestDelegators(AbstractTestSuiteChunkerImpl.java:113)
+	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.&lt;init&gt;(JUnit4TestSuiteChunkerImpl.java:71)
+	at org.powermock.modules.junit4.common.internal.impl.AbstractCommonPowerMockRunner.&lt;init&gt;(AbstractCommonPowerMockRunner.java:32)
+	at org.powermock.modules.junit4.PowerMockRunner.&lt;init&gt;(PowerMockRunner.java:34)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:250)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -104,85 +102,5 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
-    <system-out>DEBUG - Enter into EnrollmentJdbcDaoImpl--start
-FATAL - Unknown Error from database 
-java.sql.SQLNonTransientConnectionException: Default algorithm definitions for TrustManager and/or KeyManager are invalid.  Check java security properties file.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:70)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
-	at com.mysql.cj.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:453)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.citi.membership.enrollment.dao.EnrollmentDaoImpl.createEnrollment(EnrollmentDaoImpl.java:36)
-	at com.citi.membership.enrollment.dao.EnrollmentDaoImplTest.testCreateEnrollment(EnrollmentDaoImplTest.java:58)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:68)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:316)
-	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:89)
-	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:97)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.executeTest(PowerMockJUnit44RunnerDelegateImpl.java:300)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTestInSuper(PowerMockJUnit47RunnerDelegateImpl.java:131)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.access$100(PowerMockJUnit47RunnerDelegateImpl.java:59)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner$TestExecutorStatement.evaluate(PowerMockJUnit47RunnerDelegateImpl.java:147)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.evaluateStatement(PowerMockJUnit47RunnerDelegateImpl.java:107)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit47RunnerDelegateImpl$PowerMockJUnit47MethodRunner.executeTest(PowerMockJUnit47RunnerDelegateImpl.java:82)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$PowerMockJUnit44MethodRunner.runBeforesThenTestThenAfters(PowerMockJUnit44RunnerDelegateImpl.java:288)
-	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:87)
-	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:50)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.invokeTestMethod(PowerMockJUnit44RunnerDelegateImpl.java:208)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.runMethods(PowerMockJUnit44RunnerDelegateImpl.java:147)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl$1.run(PowerMockJUnit44RunnerDelegateImpl.java:121)
-	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:34)
-	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:44)
-	at org.powermock.modules.junit4.internal.impl.PowerMockJUnit44RunnerDelegateImpl.run(PowerMockJUnit44RunnerDelegateImpl.java:123)
-	at org.powermock.modules.junit4.common.internal.impl.JUnit4TestSuiteChunkerImpl.run(JUnit4TestSuiteChunkerImpl.java:121)
-	at org.powermock.modules.junit4.common.internal.impl.AbstractCommonPowerMockRunner.run(AbstractCommonPowerMockRunner.java:53)
-	at org.powermock.modules.junit4.PowerMockRunner.run(PowerMockRunner.java:59)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: com.mysql.cj.exceptions.SSLParamsException: Default algorithm definitions for TrustManager and/or KeyManager are invalid.  Check java security properties file.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.protocol.ExportControlled.getSSLContext(ExportControlled.java:517)
-	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:303)
-	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:188)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:97)
-	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:333)
-	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:203)
-	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1353)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:157)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
-	... 45 more
-Caused by: java.security.NoSuchAlgorithmException: class configured for TrustManagerFactory: sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory not a TrustManagerFactory
-	at sun.security.jca.GetInstance.checkSuperClass(GetInstance.java:260)
-	at sun.security.jca.GetInstance.getInstance(GetInstance.java:237)
-	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164)
-	at javax.net.ssl.TrustManagerFactory.getInstance(TrustManagerFactory.java:139)
-	at com.mysql.cj.protocol.ExportControlled.getSSLContext(ExportControlled.java:514)
-	... 54 more
-</system-out>
-    <system-err>log4j:WARN No such property [conversionPattern] in org.apache.log4j.SimpleLayout.
-</system-err>
   </testcase>
 </testsuite>

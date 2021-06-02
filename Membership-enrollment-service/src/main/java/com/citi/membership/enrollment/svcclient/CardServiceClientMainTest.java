@@ -5,6 +5,8 @@
  */
 package com.citi.membership.enrollment.svcclient;
 
+import org.apache.log4j.Logger;
+
 import com.citi.membership.enrollment.model.CardDetailsResponse;
 
 /**
@@ -15,13 +17,14 @@ import com.citi.membership.enrollment.model.CardDetailsResponse;
  */
 public class CardServiceClientMainTest {
 
+	private static Logger logger=Logger.getLogger(CardServiceClientMainTest.class);
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		CardsServiceClientImpl svcClient=new CardsServiceClientImpl();
 		CardDetailsResponse response=svcClient.getCardDetails("056789123456789");
-		System.out.println("Response "+response);
+		logger.info("Response "+response);
 
 	}
 

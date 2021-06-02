@@ -54,12 +54,12 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 			cs.setString(11, enrollmentDaoRequest.getMobNum());
 			cs.setString(12, enrollmentDaoRequest.getEnrollmentDate());
 
-			boolean  b = cs.execute();
-			logger.debug("b is:"+b);
+			boolean  queryExecution = cs.execute();
+			logger.debug("QueryExecution is:"+queryExecution);
 			//4.Prepare the dao response
 			String dbResponseCode = cs.getString(13);
 			String dbResponseMsg = cs.getString(14);
-
+			String ACK_NUM_OUT=cs.getString(15);
 			
 			//String dbResponseCode="000";
 			//String dbResponseMsg=null;
@@ -71,11 +71,11 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 				daoResponse.setEnrollmentStatus("Enrollment Successfull");
 				daoResponse.setResponseCode("0");
 				daoResponse.setResponseMsg("Success");
+				daoResponse.setAckNum(ACK_NUM_OUT);
 				daoResponse.setDiscription("It is enrollment object call");
 			}else if( "100".equals(dbResponseCode) || "101".equals(dbResponseCode) || "1002".equals(dbResponseCode)){
-
 				throw new BusinessException(dbResponseCode, dbResponseMsg);
-			} else {
+			}else {
 				throw new SystemException(dbResponseCode, dbResponseMsg);
 			}
 		}catch (BusinessException be) {
@@ -95,7 +95,7 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 			logger.fatal("Unknown Error from database ",e);
 			throw new SystemException("8888","Unknown Error from database "+e.getMessage());
 		}
-		logger.info("Exit from dao--end "+daoResponse);
+		logger.info("Exit from Simple JDBC dao--end "+daoResponse);
 		return daoResponse;
 	}
 

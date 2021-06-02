@@ -34,16 +34,16 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
  */
 //@Component
 //@Qualifier("enrollmentSpringDaoImpl")
-public class EnrollmentSpringDaoImpl extends StoredProcedure implements EnrollmentDao {
+public class EnrollmentSpringDaoImpl extends StoredProcedure {//implements EnrollmentDao {
 
 	private Logger logger=Logger.getLogger(EnrollmentDaoImpl.class);
-//	@Autowired
-//	public EnrollmentSpringDaoImpl(JdbcTemplate jdbcTemplate) {
-//		super(jdbcTemplate,"MRP_ENROLLMENT");
-//		logger.debug("*******EnrollmentSpringDaoImpl******");
-//		registerInputOutputParam();
-//	}
-	
+	/*	@Autowired
+	public EnrollmentSpringDaoImpl(JdbcTemplate jdbcTemplate) {
+		super(jdbcTemplate,"MRP_ENROLLMENT");
+		logger.debug("*******EnrollmentSpringDaoImpl******");
+		registerInputOutputParam();
+	}
+	*/
 	/**
 	 * 
 	 */
@@ -70,10 +70,9 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure implements Enrollme
 	}
 	
 	public EnrollmentDaoResponse createEnrollment(EnrollmentDaoRequest enrollmentDaoRequest) throws BusinessException, SystemException  {
-		logger.debug("Enter into EnrollmentDaoImpl--start");
+		logger.debug("Enter into EnrollmentSpringDaoImpl--start");
 		EnrollmentDaoResponse daoResponse=null;
 		try {
-			
 			//1.Get the request from service
 			//2.Prepare the request for db i.e. prepare the db queries
 			Map<String, Object> requestMap = new HashMap<String, Object>();
@@ -94,8 +93,8 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure implements Enrollme
 			//3.Call db and get the db response i.e. Resultset
 			Map<String, Object> responseMap = super.execute(requestMap);
 
-			String dbRespCode = (String) responseMap.get("RESP_CODE_OUT");
-			String dbRespMsg =(String) responseMap.get("RESP_MESSAGE_OUT");
+			//String dbResponseCode = (String) responseMap.get("RESP_CODE_OUT");
+			//String dbResponseMsg =(String) responseMap.get("RESP_MESSAGE_OUT");
 			
 			//4.Prepare the dao response
 			String dbResponseCode="000";
@@ -135,7 +134,7 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure implements Enrollme
 			logger.fatal("Unknown Error from database ",e);
 			throw new SystemException("8888","Unknown Error from database form class EnrollemntSpringDaoImpl "+e.getMessage());
 		}
-		logger.info("Exit from dao--end "+daoResponse);
+		logger.info("Exit from EnrollmentSpringdao--end "+daoResponse);
 		return daoResponse;
 	}
 
