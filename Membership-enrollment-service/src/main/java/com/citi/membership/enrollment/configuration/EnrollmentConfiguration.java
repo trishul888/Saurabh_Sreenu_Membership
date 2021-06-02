@@ -50,12 +50,22 @@ public class EnrollmentConfiguration {
 	public RestTemplate restTempate() {
 		return new RestTemplate();
 	}
-	/*
+	
+	@Bean
+	public DataSource dataSource() {
+		DriverManagerDataSource dataSource=new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql:///saurabh_sreenu");
+		dataSource.setUsername("root");
+		dataSource.setPassword("Saurabh23patre@");
+		return dataSource;
+	}
+	
 	@Bean
 	public JdbcTemplate jdbcTemplate() throws NamingException {
 		return new JdbcTemplate(dataSource());
 	}
-
+	/*
 	@Bean
 	public DataSource dataSource() throws NamingException  {
 			DriverManagerDataSource dataSource=new DriverManagerDataSource();

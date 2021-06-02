@@ -38,9 +38,9 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 	@Autowired
 	CardsServiceClient cardsServiceClient;
 	
-	//@Autowired
-	//@Qualifier("enrollmentSpringDaoImpl")
-	EnrollmentDao enrollmentDao=new EnrollmentDaoImpl();
+	@Autowired
+	@Qualifier("enrollmentSpringDaoImpl")
+	EnrollmentDao enrollmentDao;
 	@Autowired
 	EnrollmentServiceRequestBuilder enrollmentServiceRequestBuilder;
 	@Autowired

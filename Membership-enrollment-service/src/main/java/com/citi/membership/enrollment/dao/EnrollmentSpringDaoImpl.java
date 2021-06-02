@@ -32,18 +32,17 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
  * @Description::EnrollmentSpringDaoImpl.java
  * @Tags       ::
  */
-//@Component
-//@Qualifier("enrollmentSpringDaoImpl")
-public class EnrollmentSpringDaoImpl extends StoredProcedure {//implements EnrollmentDao {
+@Component
+@Qualifier("enrollmentSpringDaoImpl")
+public class EnrollmentSpringDaoImpl extends StoredProcedure implements EnrollmentDao {
 
 	private Logger logger=Logger.getLogger(EnrollmentDaoImpl.class);
-	/*	@Autowired
+	@Autowired
 	public EnrollmentSpringDaoImpl(JdbcTemplate jdbcTemplate) {
 		super(jdbcTemplate,"MRP_ENROLLMENT");
 		logger.debug("*******EnrollmentSpringDaoImpl******");
 		registerInputOutputParam();
 	}
-	*/
 	/**
 	 * 
 	 */
@@ -66,7 +65,6 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure {//implements Enrol
 		declareParameter(new SqlOutParameter("ACK_NUM_OUT", Types.VARCHAR));
 
 		compile();
-
 	}
 	
 	public EnrollmentDaoResponse createEnrollment(EnrollmentDaoRequest enrollmentDaoRequest) throws BusinessException, SystemException  {
@@ -93,24 +91,25 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure {//implements Enrol
 			//3.Call db and get the db response i.e. Resultset
 			Map<String, Object> responseMap = super.execute(requestMap);
 
-			//String dbResponseCode = (String) responseMap.get("RESP_CODE_OUT");
-			//String dbResponseMsg =(String) responseMap.get("RESP_MESSAGE_OUT");
+			String dbResponseCode = (String) responseMap.get("RESP_CODE_OUT");
+			String dbResponseMsg =(String) responseMap.get("RESP_MESSAGE_OUT");
 			
 			//4.Prepare the dao response
+		/*
 			String dbResponseCode="000";
 			String dbResponseMsg=null;
-			logger.info("Response code :"+dbResponseCode+" Response msg "+dbResponseMsg);
+		*/	logger.info("Response code :"+dbResponseCode+" Response msg "+dbResponseMsg);
 			if ("000".equals(dbResponseCode)) {
 				//TODO : replace the hard code values with database response
 				daoResponse = new EnrollmentDaoResponse();
-				//daoResponse.setAckNum((String) responseMap.get("ACK_NUM_OUT"));
+				daoResponse.setAckNum((String) responseMap.get("ACK_NUM_OUT"));
 				daoResponse.setAckNum("1212abc");
 				daoResponse.setEnrollmentStatus("Enrollment Successfull");
-				//daoResponse.setResponseCode(dbResponseCode);
-				//daoResponse.setResponseMsg(dbResponseMsg);
-				daoResponse.setResponseCode("0");
+				daoResponse.setResponseCode(dbResponseCode);
+				daoResponse.setResponseMsg(dbResponseMsg);
+		/*		daoResponse.setResponseCode("0");
 				daoResponse.setResponseMsg("Success");
-				daoResponse.setDiscription("It is enrollment object call");
+		*/		daoResponse.setDiscription("It is enrollment object call");
 			}else if( "100".equals(dbResponseCode) || "101".equals(dbResponseCode) || "1002".equals(dbResponseCode)){
 				
 				throw new BusinessException(dbResponseCode, dbResponseMsg);
