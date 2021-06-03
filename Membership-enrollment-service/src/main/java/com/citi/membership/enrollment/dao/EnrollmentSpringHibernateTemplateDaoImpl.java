@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -28,13 +29,11 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
  */
 @Component
 //@Qualifier("EnrollmentHibernateDaoImpl")
-public class EnrollmentHibernateDaoImpl implements EnrollmentDao{
+public class EnrollmentSpringHibernateTemplateDaoImpl implements EnrollmentDao{
 
-	private Logger logger=Logger.getLogger(EnrollmentHibernateDaoImpl.class);
-	
-	//@Autowired
-	//private HibernateTemplate hibernateTemplate=new HibernateTemplate();
-	
+	private Logger logger=Logger.getLogger(EnrollmentSpringHibernateTemplateDaoImpl.class);
+	@Autowired
+	private SessionFactory sessionFactory;
 	/**
 	 * 
 	 */

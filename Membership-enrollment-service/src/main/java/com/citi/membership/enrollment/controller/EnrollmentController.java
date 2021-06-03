@@ -35,7 +35,7 @@ public class EnrollmentController {
 	@Autowired
 	EnrollmentRequestValidator validator;
 	@Autowired
-	EnrollmentService service;//=new EnrollmentServiceImpl();
+	EnrollmentService service=new EnrollmentServiceImpl();
 	
 	@RequestMapping(value = "/enrollment",method = RequestMethod.POST,consumes = "application/json",produces = "application/json")
 	@ResponseBody

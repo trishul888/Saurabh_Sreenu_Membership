@@ -8,9 +8,7 @@ com\citi\membership\enrollment\model\CardDetailsResponse.class
 com\citi\membership\enrollment\dao\EnrollmentSpringDaoImpl.class
 com\citi\membership\enrollment\model\CustomerInfo.class
 com\citi\membership\enrollment\entities\ClientDetails.class
-com\citi\membership\enrollment\dao\EnrollmentHibernateDaoImpl.class
 com\citi\membership\enrollment\configuration\EnrollmentConfiguration.class
-com\citi\membership\enrollment\entities\Enrollment.class
 com\citi\membership\enrollment\model\EnrollmentDaoResponse.class
 com\citi\membership\enrollment\entities\ChannelDetails.class
 com\citi\membership\enrollment\util\EnrollmentUtil.class

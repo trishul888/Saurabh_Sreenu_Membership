@@ -23,7 +23,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "enrollment")
-public class Enrollment {
+public class EnrollmentDetails {
 
 	@javax.persistence.Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

@@ -80,7 +80,7 @@ public class EnrollmentConfiguration {
 
 
 	}*/
-	/*
+	
 	private final Properties hibernateProperties() {
 		Properties hibernateProperties=new Properties();
 		hibernateProperties.setProperty("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
@@ -88,19 +88,20 @@ public class EnrollmentConfiguration {
 		hibernateProperties.setProperty("hibernate.format-sql","true");
 		return hibernateProperties;
 	}
-	private final SessionFactory sessionFactory() throws NamingException {
+	@Bean
+	public  LocalSessionFactoryBean sessionFactory() throws NamingException {
 		LocalSessionFactoryBean localSessionFactoryBean=new LocalSessionFactoryBean();
 		localSessionFactoryBean.setDataSource(dataSource());
 		localSessionFactoryBean.setHibernateProperties(hibernateProperties());
 		localSessionFactoryBean.setPackagesToScan("com.citi.membership.enrollment.entities");
-		return (SessionFactory) localSessionFactoryBean;
+		return localSessionFactoryBean;
 	}
 
 	@Bean
 	public HibernateTemplate hibernateTemplate() throws NamingException {
-		HibernateTemplate hibernateTemplate=new HibernateTemplate();
-		hibernateTemplate.setSessionFactory(sessionFactory());
+		HibernateTemplate hibernateTemplate=new HibernateTemplate(sessionFactory().getObject());
+		hibernateTemplate.setCheckWriteOperations(false);;
 		return hibernateTemplate;
-	}
+	}/*
 	 */
 }
