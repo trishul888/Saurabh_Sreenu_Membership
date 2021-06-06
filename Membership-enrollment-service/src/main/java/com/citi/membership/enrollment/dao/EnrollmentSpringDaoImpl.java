@@ -103,7 +103,7 @@ public class EnrollmentSpringDaoImpl extends StoredProcedure implements Enrollme
 				//TODO : replace the hard code values with database response
 				daoResponse = new EnrollmentDaoResponse();
 				daoResponse.setAckNum((String) responseMap.get("ACK_NUM_OUT"));
-				daoResponse.setAckNum("1212abc");
+				//daoResponse.setAckNum("1212abc");
 				daoResponse.setEnrollmentStatus("Enrollment Successfull");
 				daoResponse.setResponseCode(dbResponseCode);
 				daoResponse.setResponseMsg(dbResponseMsg);

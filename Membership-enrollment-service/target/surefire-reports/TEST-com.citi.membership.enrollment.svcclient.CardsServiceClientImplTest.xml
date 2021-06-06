@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.citi.membership.enrollment.svcclient.CardsServiceClientImplTest" time="1.741" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.citi.membership.enrollment.svcclient.CardsServiceClientImplTest" time="2.03" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\Saurabh\Java_Project_Real\JavaProject_Sreenu\Sreenu_Project_Saurabh\Sreenu_Project_Saurabh_DAO_ONWORDS\Sreenu_Basic_saurabh_New_Update\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1326172853242549636.tmp"/>
+    <property name="classworlds.conf" value="E:\Saurabh\Java_Project_Real\JavaProject_Sreenu\Sreenu_Project_Saurabh\Sreenu_Project_Saurabh_DAO_ONWORDS\Sreenu_Basic_saurabh_New_Update\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1303737712185167195.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="D:\Program Files\Java\jdk1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jdk-11.0.8/bin/server;D:/Program Files/Java/jdk-11.0.8/bin;D:\app\asus\product\11.2.0\dbhome_2\bin;D:\app\asus\product\11.2.0\dbhome_1\bin;D:\Program Files\Java\jdk-11.0.8\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_201\bin;D:\Program Files\PuTTY\;E:\software\Maven Tool\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;D:\Program Files\nodejs\;C:\Program Files\Cloud Foundry;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\asus\AppData\Local\Microsoft\WindowsApps;C:\Users\asus\AppData\Roaming\npm;%IntelliJ IDEA Community Edition%;C:\Users\asus\AppData\Local\GitHubDesktop\bin;E:\software\java\eclipse-jee-2020-03-R-incubation-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.citi.membership.enrollment.svcclient.CardsServiceClientImplTest" name="testGetCardDetails" time="1.741"/>
+  <testcase classname="com.citi.membership.enrollment.svcclient.CardsServiceClientImplTest" name="testGetCardDetails" time="2.03"/>
 </testsuite>

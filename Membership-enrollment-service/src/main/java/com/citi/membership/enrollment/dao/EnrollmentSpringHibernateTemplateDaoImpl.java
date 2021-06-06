@@ -32,8 +32,7 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
 public class EnrollmentSpringHibernateTemplateDaoImpl implements EnrollmentDao{
 
 	private Logger logger=Logger.getLogger(EnrollmentSpringHibernateTemplateDaoImpl.class);
-	@Autowired
-	private SessionFactory sessionFactory;
+	
 	/**
 	 * 
 	 */

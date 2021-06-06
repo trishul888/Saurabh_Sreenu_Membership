@@ -34,7 +34,7 @@ public class EnrollmentController {
 	private Logger logger=Logger.getLogger(EnrollmentController.class);
 	@Autowired
 	EnrollmentRequestValidator validator;
-	@Autowired
+	//@Autowired
 	EnrollmentService service=new EnrollmentServiceImpl();
 	
 	@RequestMapping(value = "/enrollment",method = RequestMethod.POST,consumes = "application/json",produces = "application/json")

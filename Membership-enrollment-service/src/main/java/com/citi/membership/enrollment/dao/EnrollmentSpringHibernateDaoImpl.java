@@ -35,12 +35,12 @@ import com.citi.membership.enrollment.model.EnrollmentDaoResponse;
  * @Description::EnrollmentHibernateDaoImpl.java
  */
 @Component
-@Qualifier("EnrollmentHibernateDaoImpl")
+//@Qualifier("EnrollmentHibernateDaoImpl")
 public class EnrollmentSpringHibernateDaoImpl implements EnrollmentDao{
 
 	private Logger logger=Logger.getLogger(EnrollmentSpringHibernateDaoImpl.class);
-	@Autowired
-	private SessionFactory sessionFactory;
+//	@Autowired
+//	private SessionFactory sessionFactory;
 	/**
 	 * 
 	 */
@@ -50,23 +50,23 @@ public class EnrollmentSpringHibernateDaoImpl implements EnrollmentDao{
 		String dbResponseCode="999";
 		String dbResponseMsg=null;
 		String ACK_NUMBER=null;
-		Session session=sessionFactory.openSession();	
+//		Session session=sessionFactory.openSession();	
 		try {
 			//1.Get the request from service
 			//2.Prepare the request for db i.e. prepare the db queries
 			//CLient details verification
 			Criteria criteria;
-			List<ClientDetails> clientDetails=getClientDetails(enrollmentDaoRequest,session);
-			if(clientDetails==null || clientDetails.size()<=0) {
-				dbResponseCode="101";
-				dbResponseMsg="ClientId not Avaliable";
-			}
+//			List<ClientDetails> clientDetails=getClientDetails(enrollmentDaoRequest,session);
+//			if(clientDetails==null || clientDetails.size()<=0) {
+//				dbResponseCode="101";
+//				dbResponseMsg="ClientId not Avaliable";
+//			}
 			//3.Call db and get the db response i.e. Resultset
 			//4.Prepare the dao response
 			logger.info("Response code :"+dbResponseCode+" Response msg "+dbResponseMsg);
 			if(dbResponseCode=="999") {
 				EnrollmentDetails enrollmentDetails=buildEnrollment(enrollmentDaoRequest);
-				session.save(enrollmentDetails);
+//				session.save(enrollmentDetails);
 				dbResponseCode="000";
 				dbResponseMsg="Enrollment Done Successfully";
 				ACK_NUMBER=getAckNumber();
@@ -104,7 +104,7 @@ public class EnrollmentSpringHibernateDaoImpl implements EnrollmentDao{
 			logger.fatal("Unknown Error from database ",e);
 			throw new SystemException("8888","Unknown Error from database form class EnrollemntSpringDaoImpl "+e.getMessage());
 		}finally {
-			session.close();
+//			session.close();
 		}
 		
 		logger.info("Exit from EnrollmentHibernateDaoImpl--end "+daoResponse);

@@ -16,6 +16,7 @@ import com.citi.membership.enrollment.dao.EnrollmentDao;
 import com.citi.membership.enrollment.dao.EnrollmentDaoImpl;
 
 import com.citi.membership.enrollment.dao.EnrollmentSpringDaoImpl;
+import com.citi.membership.enrollment.dao.EnrollmentSpringHibernateDaoImpl;
 import com.citi.membership.enrollment.exception.BusinessException;
 import com.citi.membership.enrollment.exception.SystemException;
 import com.citi.membership.enrollment.model.EnrollmentDaoRequest;
@@ -38,10 +39,10 @@ public class EnrollmentServiceImpl implements EnrollmentService {
 	@Autowired
 	CardsServiceClient cardsServiceClient;
 	
-	@Autowired
+	//@Autowired
 	//@Qualifier("enrollmentSpringDaoImpl")
-	@Qualifier("EnrollmentHibernateDaoImpl")
-	EnrollmentDao enrollmentDao;
+	//@Qualifier("EnrollmentHibernateDaoImpl")
+	EnrollmentDao enrollmentDao=new EnrollmentDaoImpl();
 	@Autowired
 	EnrollmentServiceRequestBuilder enrollmentServiceRequestBuilder;
 	@Autowired

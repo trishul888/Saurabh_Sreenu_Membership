@@ -88,8 +88,9 @@ public class EnrollmentConfiguration {
 		hibernateProperties.setProperty("hibernate.format-sql","true");
 		return hibernateProperties;
 	}
+	/*
 	@Bean
-	public  LocalSessionFactoryBean sessionFactory() throws NamingException {
+	public  LocalSessionFactoryBean sessionFactory()  {
 		LocalSessionFactoryBean localSessionFactoryBean=new LocalSessionFactoryBean();
 		localSessionFactoryBean.setDataSource(dataSource());
 		localSessionFactoryBean.setHibernateProperties(hibernateProperties());
@@ -102,6 +103,6 @@ public class EnrollmentConfiguration {
 		HibernateTemplate hibernateTemplate=new HibernateTemplate(sessionFactory().getObject());
 		hibernateTemplate.setCheckWriteOperations(false);;
 		return hibernateTemplate;
-	}/*
+	}
 	 */
 }
